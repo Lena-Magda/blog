@@ -1,0 +1,19 @@
+<form [formGroup]="searchForm" (ngSubmit)="onSubmit()">
+  <section>
+    <input type="text" formControlName="query">
+    <button type="submit">Szukaj</button>
+  </section>
+
+  <!-- <section>
+    <select formControlName="sort">
+      <option value="">--</option>
+      <option value="name">nazwa</option>
+      <option value="price">cena</option>
+    </select>
+
+    <select formControlName="order">
+      <option value="asc">rosnąco</option>
+      <option value="desc">malejąco</option>
+    </select>
+  </section> -->
+</form>

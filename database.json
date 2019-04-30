@@ -1,0 +1,34 @@
+{
+  "posts": [
+    {
+      "title": "Post numer 1",
+      "text": "Lorem impsum",
+      "id": 1
+    },
+    {
+      "title": "Post numer 2",
+      "text": "Lorem impsum",
+      "id": 2
+    },
+    {
+      "title": "Alkoholizm wieku dziecięcego",
+      "text": "sdfuhgsd sdjbhsdiuf dsuhfis cgsdui cgweugbfw ucfwgue udfuwe ucbwguef uydfhse",
+      "id": 3
+    },
+    {
+      "title": "Liczenie owiec",
+      "text": "adewqe ewew\nwefsdefr\nwefrwe\ne\nse\nssssssssss",
+      "id": 4
+    },
+    {
+      "title": "Roboty drogowe",
+      "text": "Utrudnienia na S8",
+      "id": 5
+    },
+    {
+      "title": "Milczenie owiec",
+      "text": "raz dwa drzewo las blednie światło nie ma ras",
+      "id": 6
+    }
+  ]
+}

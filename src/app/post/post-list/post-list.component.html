@@ -1,0 +1,14 @@
+<h2>Lista Postów</h2>
+
+<!-- wyszukiwarka postów -->
+<app-post-search (search)="onSearch($event)"></app-post-search>
+
+  <!-- lista postów -->
+<app-post
+    class="list-item"
+    (delete)="onDelete($event)"
+    *ngFor="let p of posts"
+    [data]="p">
+</app-post>
+
+

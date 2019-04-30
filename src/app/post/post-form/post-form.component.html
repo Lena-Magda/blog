@@ -1,0 +1,23 @@
+<h2>Dodaj Nowy Post</h2>
+
+<button type="button" (click)="chooseUser()">Zaloguj</button>
+<button>Wyloguj</button>
+
+<div *appAllowedUser="Admin">
+
+  <form [formGroup]="postForm" (ngSubmit)="createPost()">
+    <label>Tytuł: <input type="text" formControlName="title"></label>
+    <p class="error" *ngIf="showErrors && postForm.get('title').errors?.minlength">
+        Nazwa musi mieć min. 3 znaków.
+    </p>
+    <br><br>
+    <label>Treść: <textarea rows="10" cols="50" formControlName="text"></textarea></label>
+    <p class="error" *ngIf="showErrors && postForm.get('text').errors?.minlength">
+        Nazwa musi mieć min. 5 znaków.
+    </p>
+    <br><br>
+    <button type="reset" (click)="resetForm()">Reset</button>
+    <button type="submit">Opublikuj</button>
+  </form>
+
+</div>
