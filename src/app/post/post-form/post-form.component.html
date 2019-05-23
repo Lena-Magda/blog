@@ -1,19 +1,27 @@
-<h2>Dodaj Nowy Post</h2>
+<div *appAllowedUser="'Anonymous'" class="form-containser">
+  <p>Zaloguj się aby dodać nowy post.</p>
+</div>
 
-<button type="button" (click)="chooseUser()">Zaloguj</button>
-<button>Wyloguj</button>
 
-<div *appAllowedUser="Admin">
+<div *appAllowedUser="'Admin'" class="form-container">
+
+    <h2>Dodaj Nowy Post</h2>
 
   <form [formGroup]="postForm" (ngSubmit)="createPost()">
     <label>Tytuł: <input type="text" formControlName="title"></label>
+    <p class="error" *ngIf="showErrors && postForm.get('title').errors?.required">
+      Nazwa jest wymagana.
+    </p>
     <p class="error" *ngIf="showErrors && postForm.get('title').errors?.minlength">
-        Nazwa musi mieć min. 3 znaków.
+        Nazwa musi mieć min. 3 znaki.
     </p>
     <br><br>
     <label>Treść: <textarea rows="10" cols="50" formControlName="text"></textarea></label>
+    <p class="error" *ngIf="showErrors && postForm.get('text').errors?.required">
+      Treść jest wymagana.
+    </p>
     <p class="error" *ngIf="showErrors && postForm.get('text').errors?.minlength">
-        Nazwa musi mieć min. 5 znaków.
+        Treść musi mieć min. 5 znaków.
     </p>
     <br><br>
     <button type="reset" (click)="resetForm()">Reset</button>

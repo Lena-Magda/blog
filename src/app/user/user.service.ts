@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
-import { shareReplay } from 'rxjs/operators';
+import { shareReplay, take } from 'rxjs/operators';
 import { User } from './user.model';
 
 @Injectable({
@@ -9,12 +9,23 @@ import { User } from './user.model';
 export class UserService {
   public user: BehaviorSubject<User> = new BehaviorSubject(User.Anonymous);
   public loggedInUser: Observable<User> = this.user.pipe(shareReplay(1));
+  public takeOne: Observable<User> = this.user.pipe(shareReplay(1), take(1));
 
   public logIn(user: User) {
-    this.user.next(user);
-  }
+    this.takeOne.subscribe(takeOne => {
+      if (takeOne === User.Anonymous) {
+        this.user.next(user);
+        console.log(`user: ${user}`);
+      }
+    })
+
+  };
 
   public logOut() {
-    this.user.next(User.Anonymous);
+    this.takeOne.subscribe(takeOne => {
+      if (takeOne !== User.Anonymous) {
+        this.user.next(User.Anonymous);
+      }
+    })
   }
 }

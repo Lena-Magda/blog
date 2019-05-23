@@ -3,3 +3,8 @@
     color: white;
     font-weight: bold;
   }
+
+.form-container{
+  height: 100vh;
+  background-color: lightgray;
+}

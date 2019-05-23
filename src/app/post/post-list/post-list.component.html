@@ -1,14 +1,75 @@
-<h2>Lista Postów</h2>
+<div class="row">
 
-<!-- wyszukiwarka postów -->
-<app-post-search (search)="onSearch($event)"></app-post-search>
+  <div class="left col-sm-4">
+    <!-- <div class="center">
+      <img class="logo" src="../../../assets/logo-blog.png" alt="">
+    </div> -->
 
-  <!-- lista postów -->
-<app-post
-    class="list-item"
-    (delete)="onDelete($event)"
-    *ngFor="let p of posts"
-    [data]="p">
-</app-post>
+    <div class="center">
+
+      <aside class="center">
+        <section class="about">
+          <h3 class="main-color">Lorem Blog</h3>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores veniam recusandae, voluptatum dicta laboriosam maxime ut suscipit ipsa, architecto fugiat praesentium saepe pariatur aliquid consequatur accusamus veritatis exercitationem reprehenderit magnam?</p>
+        </section>
+
+        <section class="about">
+          <div>
+            <img class="man" src="../../../assets/man1.png" alt="mężczyzna">
+          </div>
+          <p>O mnie: Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, necessitatibus?</p>
+        </section>
+
+        <div class="wrapper">
+          <ul class="list-unstyled">
+            <li>
+              <a>
+                <img src="../../../assets/iconfinder_Facebook_4550856.png" alt="">
+              </a>
+            </li>
+            <li>
+              <a>
+                <img src="../../../assets/iconfinder_Codepen_4550862.png" alt="">
+              </a>
+            </li>
+            <li>
+              <a>
+                  <img src="../../../assets/iconfinder_Linkedin_4550875.png" alt="">
+              </a>
+            </li>
+            <li>
+              <a>
+                  <img src="../../../assets/iconfinder_Reddit_4550872.png" alt="">
+              </a>
+            </li>
+          </ul>
+        </div>
+
+      </aside>
+
+      <div style="margin: 10px">
+        <!-- wyszukiwarka postów -->
+        <app-post-search class="center" (search)="onSearch($event)"></app-post-search>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="right col-sm-8">
+
+    <!-- lista postów -->
+    <app-post
+        class="list-item view-post"
+        (delete)="onDelete($event)"
+        *ngFor="let p of posts"
+        [data]="p">
+    </app-post>
+
+  </div>
+
+</div>
+
+
+
 
 

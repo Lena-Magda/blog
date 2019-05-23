@@ -31,12 +31,12 @@ export class PostListComponent {
     this.updateList(query);
   }
 
-  //dzięki emitowanemy id z wnętrza PostComponent
+  //dzięki emitowanemu id z wnętrza PostComponent
   public onDelete(postId): void {
     this.postService.deletePost(postId)
     .then(response => console.log(response))
     .then(() => {
-      //getRawValue zwróci wszystkie queryr
+      //getRawValue zwróci wszystkie query
       //destukturyzujemy obiekt bo getRawValue zwraca obiekt
       const { query } = this.searchComponent.searchForm.getRawValue()
       return this.updateList(query)

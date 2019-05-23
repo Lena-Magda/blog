@@ -6,19 +6,21 @@ import { UserService } from './user.service';
   selector: '[appAllowedUser]'
 })
 export class AllowedUserDirective implements OnInit {
-  @Input() public appAllowedUser: User;
+  @Input("appAllowedUser") appAllowedUser: User;
 
   constructor(private element: ElementRef,
               private templateRef: TemplateRef<any>,
               private viewContainer: ViewContainerRef,
               private userService: UserService) { }
 
-  public ngOnInit(): void {
+  public ngOnInit() {
+
     this.userService.loggedInUser.subscribe(loggedInUser => {
       if (loggedInUser === this.appAllowedUser) {
         this.viewContainer.createEmbeddedView(this.templateRef);
       } else {
         this.viewContainer.clear();
+        console.log(`Obecnie zalogowany user: ${User[loggedInUser]} wiec nic nie wyświetlam.`);
       }
     });
   }

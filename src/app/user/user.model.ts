@@ -1,5 +1,5 @@
 export enum User {
-  Admin,
-  Developer,
-  Anonymous
+  Admin = 'Admin',
+  Developer = 'Developer',
+  Anonymous = 'Anonymous'
 }

@@ -1,6 +1,20 @@
-<h3>
-  <a routerLink="/posts/{{data?.id}}">{{data?.title}}</a>
-</h3>
-<p routerLink="/posts/{{data?.id}}">{{data?.text}}</p>
+<div class="container">
+  <div class="row">
+    <div class="col-auto mr-auto">
+      <h4>
+        <a routerLink="/posts/{{data?.id}}" class="main-color">{{data?.title}}</a>
+      </h4>
+    </div>
 
-<button type="button" (click)="onClick()">Usuń</button>
+  <div class="col-auto">
+    <button type="button" (click)="onClick()" *appAllowedUser="'Admin'">
+      <img src="../../../assets/kosz.png" height="20px" alt="">
+    </button>
+  </div>
+
+
+  <p routerLink="/posts/{{data?.id}}">{{data?.text}}</p>
+</div>
+<!-- <button routerLink="/posts/{{data?.id}}">Czytaj Dalej</button> -->
+
+

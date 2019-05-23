@@ -11,7 +11,6 @@ import { PostService } from './post.service';
 import { RouterModule } from '@angular/router';
 import { PostSearchComponent } from './post-search/post-search.component';
 
-
 @NgModule({
   imports: [
     CommonModule,
@@ -26,7 +25,6 @@ import { PostSearchComponent } from './post-search/post-search.component';
     PostComponent,
     PostDetailsComponent,
     PostSearchComponent
-
   ],
   providers: [PostService],
   exports: [

@@ -1,0 +1,18 @@
+<button
+    id="zaloguj"
+    (click)="chooseUserAdmin()"
+    *appAllowedUser="'Anonymous'"
+    class="btn btn-light"
+    type="button">
+    Zaloguj
+</button>
+<button
+    id="wyloguj"
+    (click)="logOutUser()"
+    *appAllowedUser="'Admin'"
+    routerLink="posts" routerLinkActive="active"
+    class="btn btn-light"
+    type="button">
+    Wyloguj
+</button>
+

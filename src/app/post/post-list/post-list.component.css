@@ -1,5 +1,65 @@
+.main-color {
+    color: rgb(36, 97, 155);
+}
+/* lewa strona widoku */
+.left {
+    background-color: gainsboro;
+    height: 100%;
+}
+.center {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.logo {
+    height: 90px;
+}
+.about {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.about p {
+    text-align: center;
+}
+.man {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+}
+
+/* social */
+.wrapper {
+    width: 100%;
+}
+.wrapper ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.wrapper li {
+    display: inline-block;
+}
+
+
+
+/* prawa strona widoku */
+.right {
+    background-color: rgb(245, 245, 245);
+}
+.view-post {
+    display: block;
+    height: 110px;
+    overflow: hidden;
+}
 .list-item + .list-item {
     border-top: 1px dashed gray;
     display: block;
     margin: 1rem 0;
 }
+.list-item {
+    padding: 1.5rem 2rem 1.5rem 0;
+
+
+}
+
