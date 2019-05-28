@@ -1,4 +1,9 @@
-<div class="container">
+<div id="postContainer" class="container">
     <!-- Post Details -->
-    <app-post [data]="post | async"></app-post>
+    <app-post-max
+        [data]="post | async"
+        (delete)="onDelete($event)"
+    ></app-post-max>
 </div>
+
+

@@ -4,7 +4,14 @@
     font-weight: bold;
   }
 
-.form-container{
-  height: 100vh;
-  background-color: lightgray;
+.form-container {
+  padding-top: 30px;
+  min-height: calc(100vh - 196px);
+  background-color: rgb(220, 220, 220);
 }
+.anonymous {
+  height: calc(100vh - 196px);
+  display: flex;
+  justify-content: center;
+}
+

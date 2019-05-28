@@ -13,13 +13,13 @@ export class PostService {
     return this.httpClient.post<Post>(this.path, post).toPromise();
   }
 
-    //pobiera wszystkie posty z serwera (database.json)
+    // pobiera wszystkie posty z serwera (database.json)
     public getPosts(): Promise<Post[]> {
     return this.httpClient.get<Post[]>(this.path).toPromise();
   }
 
     // pobiera jeden post o pasującym id (database.json)
-    public getPost(id: string): Promise<Post> {
+    public getPost(id: number): Promise<Post> {
     return this.httpClient.get<Post>(`${this.path}/${id}`).toPromise();
   }
 

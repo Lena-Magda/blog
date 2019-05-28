@@ -1,32 +1,32 @@
 <!--The content below is only a placeholder and can be replaced.-->
 
-
-  <nav class="navbar sticky-top navbar-dark bg-dark">
-    <div class="col-auto mr-auto">
-      <a class="navbar-brand" routerLink="posts" routerLinkActive="active">
-        <img src="../assets/blog - logo szare.png" height="30px" class="d-inline-block align-top" alt="logo">
-        LoremBlog
-      </a>
-    </div>
-
-    <div class="col-auto">
-      <div class="row">
-        <a class="btn btn-outline-secondary col-auto mr-auto" routerLink="/create" routerLinkActive="active" *appAllowedUser="'Admin'">Dodaj Nowy Post</a>
-        <app-user class="col-auto"></app-user>
+<div class="wrapper">
+    <nav class="navbar sticky-top navbar-dark bg-dark">
+      <div class="col-auto mr-auto">
+        <a class="navbar-brand" routerLink="posts" routerLinkActive="active">
+          <img src="../assets/blog - logo szare.png" height="30px" class="d-inline-block align-top" alt="logo">
+          LoremBlog
+        </a>
       </div>
+
+      <div class="col-auto">
+        <div class="row">
+          <a class="btn btn-outline-secondary col-auto mr-auto" routerLink="/create" routerLinkActive="active" *appAllowedUser="'Admin'">Dodaj Nowy Post</a>
+          <app-user class="col-auto"></app-user>
+        </div>
+      </div>
+    </nav>
+
+
+    <div class="container" style="background-color: gainsboro">
+      <router-outlet></router-outlet>
     </div>
-  </nav>
 
 
-  <div class="container" style="background-color: gainsboro">
-    <router-outlet></router-outlet>
-  </div>
+    <footer class="footer"></footer>
 
-  <div class="navbar sticky-bottom bg-dark">
-    <footer class="footer">
-
-    </footer>
-  </div>
+    <div class="push"></div>
+</div>
 
 
 

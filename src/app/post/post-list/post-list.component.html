@@ -10,7 +10,7 @@
       <aside class="center">
         <section class="about">
           <h3 class="main-color">Lorem Blog</h3>
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores veniam recusandae, voluptatum dicta laboriosam maxime ut suscipit ipsa, architecto fugiat praesentium saepe pariatur aliquid consequatur accusamus veritatis exercitationem reprehenderit magnam?</p>
+          <p>Dla kogo: Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores veniam recusandae, voluptatum dicta laboriosam maxime ut suscipit ipsa, architecto fugiat praesentium saepe pariatur aliquid consequatur accusamus veritatis exercitationem reprehenderit magnam?</p>
         </section>
 
         <section class="about">
@@ -23,22 +23,22 @@
         <div class="wrapper">
           <ul class="list-unstyled">
             <li>
-              <a>
+              <a href="https://www.facebook.com/">
                 <img src="../../../assets/iconfinder_Facebook_4550856.png" alt="">
               </a>
             </li>
             <li>
-              <a>
+              <a href="https://codepen.io/#">
                 <img src="../../../assets/iconfinder_Codepen_4550862.png" alt="">
               </a>
             </li>
             <li>
-              <a>
+              <a href="https://www.linkedin.com/">
                   <img src="../../../assets/iconfinder_Linkedin_4550875.png" alt="">
               </a>
             </li>
             <li>
-              <a>
+              <a href="https://www.reddit.com/">
                   <img src="../../../assets/iconfinder_Reddit_4550872.png" alt="">
               </a>
             </li>
@@ -58,12 +58,15 @@
   <div class="right col-sm-8">
 
     <!-- lista postów -->
-    <app-post
-        class="list-item view-post"
-        (delete)="onDelete($event)"
-        *ngFor="let p of posts"
-        [data]="p">
-    </app-post>
+    <div>
+      <app-post
+          class="post-min"
+          class="list-item"
+          (delete)="onDelete($event)"
+          *ngFor="let p of posts"
+          [data]="p">
+      </app-post>
+    </div>
 
   </div>
 

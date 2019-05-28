@@ -10,7 +10,6 @@ import { SearchFormValue } from '../post-search/post-search.model';
   styleUrls: ['./post-list.component.css']
 })
 export class PostListComponent {
-
   public posts: Post[] = [];
 
   //przypisz mi komponent do zmiennej jesli znajdziesz go w htmlu
@@ -19,19 +18,19 @@ export class PostListComponent {
   constructor(private postService: PostService) { }
 
   //uaktualnia bez odświeżania strony
-  //puste stringi = domysle warości bo w onDelete nie mamy skąd wziąć trzech wrtości
   public updateList(query) {
     this.postService.findPosts(query)
-      .then((post: Post[]) => this.posts = post)
+      .then((post: Post[]) => this.posts = post )
       .catch((err) => console.error(err));
   }
 
+  //wyszukiwarka postów
   public onSearch(searchFormValue: SearchFormValue): void {
     const { query } = searchFormValue;
     this.updateList(query);
   }
 
-  //dzięki emitowanemu id z wnętrza PostComponent
+  // usuwanie dzięki emitowanemu id z wnętrza PostComponent
   public onDelete(postId): void {
     this.postService.deletePost(postId)
     .then(response => console.log(response))
@@ -43,4 +42,5 @@ export class PostListComponent {
     })
     .catch(err => console.log(err));
   }
+
 }

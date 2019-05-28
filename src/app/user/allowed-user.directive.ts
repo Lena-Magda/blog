@@ -14,7 +14,7 @@ export class AllowedUserDirective implements OnInit {
               private userService: UserService) { }
 
   public ngOnInit() {
-
+    // sprawdza kto jest zalogowany i wyświetla odpowiednie dla niego treści
     this.userService.loggedInUser.subscribe(loggedInUser => {
       if (loggedInUser === this.appAllowedUser) {
         this.viewContainer.createEmbeddedView(this.templateRef);

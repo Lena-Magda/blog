@@ -7,10 +7,11 @@ import { UserModule } from './user/user.module';
 import { OopsComponent } from './oops/oops.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
-    OopsComponent
+    OopsComponent,
   ],
   imports: [
     BrowserModule,

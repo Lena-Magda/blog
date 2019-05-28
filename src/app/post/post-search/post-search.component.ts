@@ -17,11 +17,12 @@ export class PostSearchComponent implements OnInit {
   public ngOnInit(): void {
     this.searchForm = this.formBuilder.group({
       query: "",
+      // można dodać sortowanie po dacie dodania posta
       // sort: "",
-      // order: "asc"
+      // order: ""
     });
 
-    // powoduje pobranie kanapek na poziomie SandwichListComponent (onSearch)
+    // pobiera posty na poziomie PostListComponent (onSearch)
     this.onSubmit();
   }
 

@@ -2,15 +2,13 @@ a + a {
     margin-left: 1rem;
 }
 
-
-/* .active {
-border-bottom: 4px solid black;
-} */
-
 /* footer */
 
-.footer {
-    display: block;
-    height: 140px;
+.wrapper {
+    min-height: calc(100vh - 196px);
+}
 
+.footer {
+    height: 140px;
+    background-color: #343a40;
 }

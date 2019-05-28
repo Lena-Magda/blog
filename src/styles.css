@@ -7,4 +7,5 @@ body {
 
     /* Background pattern from Subtle Patterns */
     background-image: url(assets/congruent_outline.png);
+    height: 100%;
 }

@@ -4,7 +4,8 @@
 /* lewa strona widoku */
 .left {
     background-color: gainsboro;
-    height: 100%;
+    padding-top: 30px;
+    /* height: 100%; */
 }
 .center {
     display: flex;
@@ -47,11 +48,9 @@
 .right {
     background-color: rgb(245, 245, 245);
 }
-.view-post {
-    display: block;
-    height: 110px;
-    overflow: hidden;
-}
+/* .post-min {
+
+} */
 .list-item + .list-item {
     border-top: 1px dashed gray;
     display: block;

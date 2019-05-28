@@ -1,14 +1,16 @@
-<div *appAllowedUser="'Anonymous'" class="form-containser">
-  <p>Zaloguj się aby dodać nowy post.</p>
+<div *appAllowedUser="'Anonymous'" class="form-container anonymous">
+  <h4>Zaloguj się aby dodać nowy post.</h4>
 </div>
 
 
 <div *appAllowedUser="'Admin'" class="form-container">
 
-    <h2>Dodaj Nowy Post</h2>
+  <h3>Dodaj Nowy Post</h3>
+  <form [formGroup]="postForm" (ngSubmit)="createPost()" >
 
-  <form [formGroup]="postForm" (ngSubmit)="createPost()">
-    <label>Tytuł: <input type="text" formControlName="title"></label>
+    <label>Tytuł:
+      <input type="text" formControlName="title" class="form-control">
+    </label>
     <p class="error" *ngIf="showErrors && postForm.get('title').errors?.required">
       Nazwa jest wymagana.
     </p>
@@ -16,7 +18,9 @@
         Nazwa musi mieć min. 3 znaki.
     </p>
     <br><br>
-    <label>Treść: <textarea rows="10" cols="50" formControlName="text"></textarea></label>
+    <label>Treść:
+      <textarea class="form-control" rows="10" cols="60" formControlName="text"></textarea>
+    </label>
     <p class="error" *ngIf="showErrors && postForm.get('text').errors?.required">
       Treść jest wymagana.
     </p>
@@ -24,8 +28,9 @@
         Treść musi mieć min. 5 znaków.
     </p>
     <br><br>
-    <button type="reset" (click)="resetForm()">Reset</button>
-    <button type="submit">Opublikuj</button>
+    <button type="reset" (click)="resetForm()" class="btn btn-secondary mb-2">Reset</button>
+    <button type="submit" class="btn btn-success mb-2">Opublikuj</button>
+
   </form>
 
 </div>

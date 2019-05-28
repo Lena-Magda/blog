@@ -8,13 +8,16 @@
 
   <div class="col-auto">
     <button type="button" (click)="onClick()" *appAllowedUser="'Admin'">
-      <img src="../../../assets/kosz.png" height="20px" alt="">
+      <img src="../../../assets/kosz.png" height="20px" alt="kosz">
     </button>
   </div>
 
 
-  <p routerLink="/posts/{{data?.id}}">{{data?.text}}</p>
+  <p id="text" routerLink="/posts/{{data?.id}}">{{data?.text.substr(0,250)+'...'}}</p>
+  <br />
+
+  <button id="read" routerLink="/posts/{{data?.id}}">Czytaj Dalej</button>
 </div>
-<!-- <button routerLink="/posts/{{data?.id}}">Czytaj Dalej</button> -->
+
 
 

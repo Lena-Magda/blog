@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="row">
+      <div class="col-auto mr-auto">
+        <h4>
+          <a routerLink="/posts/{{data?.id}}" class="main-color">{{data?.title}}</a>
+        </h4>
+      </div>
+
+    <div class="col-auto">
+      <button type="button" (click)="onClick()" *appAllowedUser="'Admin'">
+        <img src="../../../assets/kosz.png" height="20px" alt="kosz">
+      </button>
+    </div>
+
+
+    <p id="text" routerLink="/posts/{{data?.id}}">{{data?.text}}</p>
+  </div>
+
