@@ -8,3 +8,16 @@
     background-color: white;
     border-left: 0;
 }
+input:focus {
+    border-right: 0;
+    border-color:rgb(206, 212, 218);
+    box-shadow: none;
+    outline: 0 none;
+}
+
+.btn:focus {
+    border-left: 0;
+    border-color:rgb(206, 212, 218);
+    box-shadow: none;
+    outline: 0 none;
+}

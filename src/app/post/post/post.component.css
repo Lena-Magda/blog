@@ -11,6 +11,15 @@
 
 .trash {
     background: none;
-    border: none
+    border: none;
+}
+
+.trash:hover {
+    cursor: pointer;
+}
+
+.trash:focus {
+    box-shadow: none;
+    outline: 0 none;
 }
 

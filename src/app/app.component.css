@@ -12,3 +12,7 @@ a + a {
     height: 140px;
     background-color: #343a40;
 }
+.btn:focus {
+    box-shadow: none !important;
+    outline: 0 none !important;
+}
