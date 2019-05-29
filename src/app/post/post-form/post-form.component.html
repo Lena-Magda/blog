@@ -9,28 +9,35 @@
 
   <form [formGroup]="postForm" (ngSubmit)="createPost()" >
 
-    <label>Tytuł:
-      <input type="text" formControlName="title" class="form-control">
-    </label>
-    <p class="error" *ngIf="showErrors && postForm.get('title').errors?.required">
-      Nazwa jest wymagana.
+    <div class="title">
+      <label>Tytuł:
+        <input type="text" formControlName="title" class="form-control">
+      </label>
+      <p class="error" *ngIf="showErrors && postForm.get('title').errors?.required">
+        *Nazwa jest wymagana.
+      </p>
+      <p class="error" *ngIf="showErrors && postForm.get('title').errors?.minlength">
+        *Nazwa musi zawierać minimum 2 znaki.
+      </p>
+      <p class="error" *ngIf="showErrors && postForm.get('title').errors?.maxlength">
+        *Nazwa może zawierać maksymalnie 100 znaków.
     </p>
-    <p class="error" *ngIf="showErrors && postForm.get('title').errors?.minlength">
-        Nazwa musi mieć min. 3 znaki.
-    </p>
-    <br><br>
-    <label>Treść:
-      <textarea class="form-control" rows="10" cols="60" formControlName="text"></textarea>
-    </label>
-    <p class="error" *ngIf="showErrors && postForm.get('text').errors?.required">
-      Treść jest wymagana.
-    </p>
-    <p class="error" *ngIf="showErrors && postForm.get('text').errors?.minlength">
-        Treść musi mieć min. 5 znaków.
-    </p>
-    <br><br>
-    <button type="reset" (click)="resetForm()" class="btn btn-secondary mb-2 reset">Reset</button>
-    <button type="submit" class="btn btn-success mb-2">Opublikuj</button>
+  </div>
+
+  <div class="text">
+      <label>Treść:
+        <textarea class="form-control" rows="10" cols="50" formControlName="text"></textarea>
+      </label>
+      <p class="error" *ngIf="showErrors && postForm.get('text').errors?.required">
+        *Treść jest wymagana.
+      </p>
+      <p class="error" *ngIf="showErrors && postForm.get('text').errors?.minlength">
+        *Treść musi zawierać minimum 5 znaków.
+      </p>
+  </div>
+
+  <button type="reset" (click)="resetForm()" class="btn btn-secondary mb-2 reset">Reset</button>
+  <button type="submit" class="btn btn-success mb-2">Opublikuj</button>
 
   </form>
 

@@ -3,6 +3,10 @@
     text-decoration: none;
 }
 
+.btn-danger {
+    background-color: #dd1c2fd6;
+}
+
 .col-4 {
     text-align: end;
 }
@@ -11,6 +15,6 @@
     padding-top: 30px;
 }
 .post-content p {
-    font-size: 1.15rem;
+    font-size: 1.1rem;
     text-align: justify;
 }

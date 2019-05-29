@@ -20,7 +20,7 @@ export class PostFormComponent implements OnInit {
 
   public createForm(): FormGroup {
     return this.fb.group({
-      title: ['', [Validators.required, Validators.minLength(3)]],
+      title: ['', [Validators.required, Validators.minLength(2), Validators.maxLength(100)]],
       text: ['', [Validators.required, Validators.minLength(5)]]
     });
   }

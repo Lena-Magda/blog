@@ -1,22 +1,36 @@
 .error {
-    background-color: coral;
-    color: white;
-    font-weight: bold;
+    color: red;
+    font-size: .8rem;
   }
 
 .form-container {
-  padding: 30px 50px;
+  padding: 20px 50px;
   min-height: calc(100vh - 196px);
   margin: 0 auto;
   max-width: 800px;
   background-color:  rgb(245, 245, 245);
+
 }
+
 .anonymous {
   height: calc(100vh - 196px);
   display: flex;
   justify-content: center;
 }
+
 .reset {
   margin-right: 5px;
+}
+
+.title {
+  height: 100px;
+}
+
+.text {
+  height: 335px;
+}
+
+.form-control {
+  resize: none;
 }
 

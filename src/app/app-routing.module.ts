@@ -13,6 +13,8 @@ const routes: Routes = [
   { path: 'posts/:id', component: PostDetailsComponent },
   { path: '**', component: OopsComponent },
 
+  //brak obsługi błędów 404 ze ścieżek 'posts/**'
+
 ];
 
 @NgModule({
