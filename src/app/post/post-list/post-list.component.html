@@ -57,16 +57,14 @@
 
   <div class="right col-sm-8">
 
-    <!-- lista postów -->
-    <div>
-      <app-post
-          class="post-min"
-          class="list-item"
-          (delete)="onDelete($event)"
-          *ngFor="let p of posts"
-          [data]="p">
-      </app-post>
-    </div>
+  <!-- lista postów -->
+    <app-post
+        class="post-min"
+        class="list-item"
+        (delete)="onDelete($event)"
+        *ngFor="let p of posts"
+        [data]="p">
+    </app-post>
 
   </div>
 

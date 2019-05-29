@@ -1,3 +1,16 @@
 .main-color {
     color: rgb(36, 97, 155);
+    text-decoration: none;
+}
+
+.col-4 {
+    text-align: end;
+}
+
+.post-content {
+    padding-top: 30px;
+}
+.post-content p {
+    font-size: 1.15rem;
+    text-align: justify;
 }

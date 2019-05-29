@@ -5,13 +5,18 @@
   }
 
 .form-container {
-  padding-top: 30px;
+  padding: 30px 50px;
   min-height: calc(100vh - 196px);
-  background-color: rgb(220, 220, 220);
+  margin: 0 auto;
+  max-width: 800px;
+  background-color:  rgb(245, 245, 245);
 }
 .anonymous {
   height: calc(100vh - 196px);
   display: flex;
   justify-content: center;
+}
+.reset {
+  margin-right: 5px;
 }
 

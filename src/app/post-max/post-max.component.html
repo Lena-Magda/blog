@@ -1,18 +1,20 @@
 <div class="container">
     <div class="row">
-      <div class="col-auto mr-auto">
-        <h4>
+      <div class="col-8">
+        <h3>
           <a routerLink="/posts/{{data?.id}}" class="main-color">{{data?.title}}</a>
-        </h4>
+        </h3>
       </div>
 
-    <div class="col-auto">
-      <button type="button" (click)="onClick()" *appAllowedUser="'Admin'">
-        <img src="../../../assets/kosz.png" height="20px" alt="kosz">
+    <div class="col-4">
+      <button type="button" class="btn btn-danger btn-sm" (click)="onClick()" *appAllowedUser="'Admin'">
+        Usuń Post
       </button>
     </div>
-
-
-    <p id="text" routerLink="/posts/{{data?.id}}">{{data?.text}}</p>
   </div>
+
+    <div class="post-content">
+      <p id="text" routerLink="/posts/{{data?.id}}">{{data?.text}}</p>
+    </div>
+</div>
 

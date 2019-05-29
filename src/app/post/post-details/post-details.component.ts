@@ -28,7 +28,7 @@ export class PostDetailsComponent implements OnInit {
 
     this.postService.deletePost(postId);
     postContainer.classList.remove('container');
-    postContainer.classList.add('new-cocontainer');
+    postContainer.classList.add('new-container');
     postContainer.innerHTML = '<h4>Twój post został usunięty</h4>';
   }
 

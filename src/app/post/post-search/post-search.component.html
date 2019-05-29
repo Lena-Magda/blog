@@ -1,10 +1,27 @@
 <form [formGroup]="searchForm" (ngSubmit)="onSubmit()">
   <section>
     <div class="search">
-      <input type="text" class="form-control" id="formGroupExampleInput" formControlName="query">
-      <button type="submit">
+      <!-- <input type="text" class="form-control" id="formGroupExampleInput" formControlName="query"> -->
+
+
+      <div class="input-group mb-3">
+        <input
+              formControlName="query"
+              type="text"
+              class="form-control"
+              placeholder="Szukaj"
+              aria-describedby="basic-addon2">
+        <div class="input-group-append">
+          <button type="button" class="btn btn-outline-secondary">
+            <img src="../../../assets/lupka3.png" height="21px" alt="">
+          </button>
+        </div>
+      </div>
+
+
+      <!-- <button type="submit">
         <img src="../../../assets/lupka3.png" height="30px" alt="">
-      </button>
+      </button> -->
     </div>
   </section>
 </form>

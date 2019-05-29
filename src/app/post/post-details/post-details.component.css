@@ -1,8 +1,11 @@
 .container {
-    padding-top: 30px;
     min-height: calc(100vh - 196px);
+    background-color:  rgb(245, 245, 245);
+    max-width: 800px;
+    padding: 30px;
+
 }
-.new-cocontainer {
+.new-container {
     padding-top: 30px;
     height: calc(100vh - 196px);
     text-align: center;

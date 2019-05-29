@@ -1,23 +1,27 @@
 <div class="container">
   <div class="row">
-    <div class="col-auto mr-auto">
+    <div class="col-8">
       <h4>
         <a routerLink="/posts/{{data?.id}}" class="main-color">{{data?.title}}</a>
       </h4>
     </div>
 
-  <div class="col-auto">
-    <button type="button" (click)="onClick()" *appAllowedUser="'Admin'">
+  <div class="col-4 on-right">
+    <button class="trash" type="button" (click)="onClick()" *appAllowedUser="'Admin'">
       <img src="../../../assets/kosz.png" height="20px" alt="kosz">
     </button>
   </div>
-
-
-  <p id="text" routerLink="/posts/{{data?.id}}">{{data?.text.substr(0,250)+'...'}}</p>
-  <br />
-
-  <button id="read" routerLink="/posts/{{data?.id}}">Czytaj Dalej</button>
 </div>
+
+  <div>
+    <p routerLink="/posts/{{data?.id}}">{{data?.text.substr(0,250)+'...'}}</p>
+  </div>
+
+  <div class="on-right">
+    <button id="read" routerLink="/posts/{{data?.id}}" class="btn btn-outline-info">Czytaj Dalej</button>
+  </div>
+</div>
+
 
 
 

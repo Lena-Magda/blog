@@ -5,7 +5,8 @@
 
 <div *appAllowedUser="'Admin'" class="form-container">
 
-  <h3>Dodaj Nowy Post</h3>
+  <h4>Dodaj Nowy Post</h4>
+
   <form [formGroup]="postForm" (ngSubmit)="createPost()" >
 
     <label>Tytuł:
@@ -28,7 +29,7 @@
         Treść musi mieć min. 5 znaków.
     </p>
     <br><br>
-    <button type="reset" (click)="resetForm()" class="btn btn-secondary mb-2">Reset</button>
+    <button type="reset" (click)="resetForm()" class="btn btn-secondary mb-2 reset">Reset</button>
     <button type="submit" class="btn btn-success mb-2">Opublikuj</button>
 
   </form>

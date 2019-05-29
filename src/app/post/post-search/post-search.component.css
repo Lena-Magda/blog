@@ -2,3 +2,9 @@
     display: flex;
     justify-content: center;
 }
+
+.btn {
+    border-color:rgb(206, 212, 218);
+    background-color: white;
+    border-left: 0;
+}
