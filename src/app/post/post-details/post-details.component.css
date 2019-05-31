@@ -1,14 +1,17 @@
 .container {
-    min-height: calc(100vh - 196px);
+    min-height: calc(100vh - 256px);
     background-color:  rgb(245, 245, 245);
     max-width: 800px;
     padding: 30px;
-
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 .new-container {
     padding-top: 30px;
-    height: calc(100vh - 196px);
+    height: calc(100vh - 256px);
     text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 

@@ -4,12 +4,13 @@
   }
 
 .form-container {
-  padding: 20px 50px;
-  min-height: calc(100vh - 196px);
+  padding: 50px 50px;
+  min-height: calc(100vh - 256px);
   margin: 0 auto;
   max-width: 800px;
   background-color:  rgb(245, 245, 245);
-
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 .anonymous {
@@ -35,8 +36,8 @@
 }
 
 textarea:focus, input:focus {
-  border-color: rgba(23, 147, 229, 0.8);
-  box-shadow: 0 1px 1px rgba(23, 147, 229, 0.075) inset, 0 0 8px rgba(23, 147, 229, 0.6);
+  border-color: rgba(33, 182, 228, 0.8);
+  box-shadow: 0 1px 1px rgba(33, 182, 228, 0.075) inset, 0 0 8px rgba(33, 182, 228, 0.6);
   outline: 0 none;
 }
 

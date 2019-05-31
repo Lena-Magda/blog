@@ -2,17 +2,44 @@ a + a {
     margin-left: 1rem;
 }
 
-/* footer */
+.container {
+    background-color: gainsboro
+}
+
+.navbar-dark {
+    background-color: #22212178;
+}
+
+.btn:focus {
+    box-shadow: none !important;
+    outline: 0 none !important;
+}
 
 .wrapper {
     min-height: calc(100vh - 196px);
 }
 
+/* footer */
+
 .footer {
+    display: flex;
+    justify-content: space-between;
     height: 140px;
-    background-color: #343a40;
+    background-color: #22212178;
+    padding-top: 60px;
+    color: white;
+    padding-left: 40vw;
+    padding-right: 10vw;
 }
-.btn:focus {
-    box-shadow: none !important;
-    outline: 0 none !important;
+
+.to-top {
+    height: 50px;
 }
+.to-top:hover {
+    cursor: pointer;
+}
+
+
+
+
+

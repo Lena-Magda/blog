@@ -8,29 +8,29 @@ export class PostService {
 
     constructor(private httpClient: HttpClient) {}
 
-    // dodaje nowy post do bazy danych (database.json)
+    // Dodaje nowy post do bazy danych (database.json)
     public savePost(post: Post): Promise<Post> {
     return this.httpClient.post<Post>(this.path, post).toPromise();
   }
 
-    // pobiera wszystkie posty z serwera (database.json)
+    // Pobiera wszystkie posty z serwera (database.json)
     public getPosts(): Promise<Post[]> {
     return this.httpClient.get<Post[]>(this.path).toPromise();
   }
 
-    // pobiera jeden post o pasującym id (database.json)
+    // Pobiera jeden post o pasującym id (database.json)
     public getPost(id: number): Promise<Post> {
     return this.httpClient.get<Post>(`${this.path}/${id}`).toPromise();
   }
 
-  // pobiera posty pasujące do zapytania (q), posortowane (sort) i uporządkowane (order)
+  // Pobiera posty pasujące do zapytania (q), posortowane (sort) i uporządkowane (order)
   public findPosts(query = "", sort = "", order = ""): Promise<Post[]> {
     return this.httpClient
       .get<Post[]>(`${this.path}?q=${query}&_sort=${sort}&_order=${order}`)
       .toPromise();
   }
 
-  // usuwa wybrany post
+  // Usuwa wybrany post
   public deletePost(postId) {
     return this.httpClient.delete(`${this.path}/${postId}`).toPromise();
   }

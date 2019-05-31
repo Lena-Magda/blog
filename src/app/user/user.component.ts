@@ -12,19 +12,13 @@ export class UserComponent {
 
   constructor(private userService: UserService, private elementRef:ElementRef) { }
 
-  // ngAfterViewInit() {
-  //   this.elementRef.nativeElement.querySelector('#zaloguj').addEventListener('click', this.chooseUserAdmin.bind(this));
-  //   this.elementRef.nativeElement.querySelector('#wyloguj').addEventListener('click', this.logOutUser.bind(this));
-  // }
-
+  // Loguje na Admina > przekazuje do logIn(): ${User.Admin}
   public chooseUserAdmin(): void {
-    console.log(`przekazuję do logIn(): ${User.Admin}`);
     this.userService.logIn(User.Admin);
   };
 
-
+  // Wylogowuje > przekazuje do logIn(): ${User.Anonymous}
   public logOutUser(): void {
-    console.log(`przekazuję do logIn(): ${User.Anonymous}`);
     this.userService.logOut();
   };
 

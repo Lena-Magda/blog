@@ -1,6 +1,12 @@
+.row {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
 .main-color {
     color: rgb(36, 97, 155);
 }
+
 /* lewa strona widoku */
 .left {
     background-color: gainsboro;
@@ -16,6 +22,8 @@
     height: 90px;
 }
 .about {
+    padding-top: 10px;
+    margin-bottom: 5px;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -23,16 +31,17 @@
 .about p {
     text-align: center;
 }
-.man {
+.author {
     display: block;
     width: 100%;
     max-width: 300px;
-    margin: 10px 0 5px;
+    margin: 5px 0;
 }
 
 /* social */
 .wrapper {
     width: 100%;
+    margin-bottom: 15px;
 }
 .wrapper ul {
     width: 100%;
@@ -43,8 +52,6 @@
     display: inline-block;
 }
 
-
-
 /* prawa strona widoku */
 .right {
     background-color: rgb(245, 245, 245);
@@ -52,11 +59,10 @@
 
 .list-item + .list-item {
     border-top: 1px dashed gray;
-
 }
+
 .list-item {
     padding: 1.5rem 2rem 1.5rem 0;
     display: block;
-
 }
 

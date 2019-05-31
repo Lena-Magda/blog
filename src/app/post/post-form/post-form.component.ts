@@ -18,6 +18,7 @@ export class PostFormComponent implements OnInit {
     this.postForm = this.createForm();
   }
 
+  //  Tworzy formularz
   public createForm(): FormGroup {
     return this.fb.group({
       title: ['', [Validators.required, Validators.minLength(2), Validators.maxLength(100)]],
@@ -25,17 +26,19 @@ export class PostFormComponent implements OnInit {
     });
   }
 
+  // Reset formularza
   public resetForm(): void {
     this.showErrors = false;
     this.postForm = this.createForm();
   }
 
+  //  Dodanie posta
   public createPost() {
     this.showErrors = true;
 
     const post = this.postForm.getRawValue();
     if (this.postForm.valid) {
-      // wysyłamy zapytanie HTTP z gotowym postem
+      // Wysyła zapytanie HTTP z gotowym postem
       this.postService.savePost(post)
       .then(res => console.log(res))
       .catch(err => console.error(err))
@@ -43,6 +46,7 @@ export class PostFormComponent implements OnInit {
     } else {
       console.warn('Twoj formularz jest niepoprawny!');
     }
+
   }
 
 }

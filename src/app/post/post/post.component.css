@@ -1,12 +1,11 @@
 .main-color {
-    color: rgb(36, 97, 155);
-    text-decoration: none;
+    color: rgb(36, 97, 155) !important;
+
 }
 
 .on-right {
     display: flex;
     justify-content: flex-end;
-    /* background-color: cornflowerblue; */
 }
 
 .trash {

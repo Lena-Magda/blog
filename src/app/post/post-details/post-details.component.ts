@@ -29,7 +29,12 @@ export class PostDetailsComponent implements OnInit {
     this.postService.deletePost(postId);
     postContainer.classList.remove('container');
     postContainer.classList.add('new-container');
-    postContainer.innerHTML = '<h4>Twój post został usunięty</h4>';
+    postContainer.innerHTML = '<h4>Twój post został usunięty</h4>' + '<br>' + '<p>Za chwilę zostaniesz przekierowany do strony głównej.</p>';
+
+    // Przejście do strony głównej po usunięciu posta
+    setTimeout(function() {
+      window.location.href = "http://localhost:4200/posts";
+    }, 2500);
   }
 
 }

@@ -20,7 +20,7 @@ export class AllowedUserDirective implements OnInit {
         this.viewContainer.createEmbeddedView(this.templateRef);
       } else {
         this.viewContainer.clear();
-        console.log(`Obecnie zalogowany user: ${User[loggedInUser]} wiec nic nie wyświetlam.`);
+        // console.log(`Obecnie zalogowany user: ${User[loggedInUser]} wiec nic nie wyświetlam.`);
       }
     });
   }

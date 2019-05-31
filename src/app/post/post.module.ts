@@ -10,7 +10,7 @@ import { PostComponent } from './post/post.component';
 import { PostService } from './post.service';
 import { RouterModule } from '@angular/router';
 import { PostSearchComponent } from './post-search/post-search.component';
-import { PostMaxComponent } from '../post-max/post-max.component';
+import { PostMaxComponent } from './post-max/post-max.component';
 
 @NgModule({
   imports: [

@@ -1,23 +1,21 @@
 <div class="row">
 
+  <!-- Lewa strona widoku -->
   <div class="left col-sm-4">
-    <!-- <div class="center">
-      <img class="logo" src="../../../assets/logo-blog.png" alt="">
-    </div> -->
 
     <div class="center">
 
       <aside class="center">
         <section class="about">
-          <h3 class="main-color">Lorem Blog</h3>
-          <p>Dla kogo: Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores veniam recusandae, voluptatum dicta laboriosam maxime ut suscipit ipsa, architecto fugiat praesentium saepe pariatur aliquid consequatur accusamus veritatis exercitationem reprehenderit magnam?</p>
+          <h3 class="main-color">MadzioBlog</h3>
+          <p>Dla kogo: lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores veniam recusandae, voluptatum dicta laboriosam maxime ut suscipit ipsa, architecto fugiat praesentium saepe pariatur aliquid.</p>
         </section>
 
         <section class="about">
           <div>
-            <img class="man" src="../../../assets/man1.png" alt="mężczyzna">
+            <img class="author" src="../../../assets/Obraz3.png" alt="">
           </div>
-          <p>O mnie: Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, necessitatibus?</p>
+          <p>O mnie: lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, necessitatibus?</p>
         </section>
 
         <div class="wrapper">
@@ -47,22 +45,24 @@
 
       </aside>
 
-      <div style="margin: 10px">
-        <!-- wyszukiwarka postów -->
+      <div>
+        <!-- Wyszukiwarka postów -->
         <app-post-search class="center" (search)="onSearch($event)"></app-post-search>
       </div>
     </div>
 
   </div>
 
+  <!-- Prawa strona widoku -->
   <div class="right col-sm-8">
 
-  <!-- lista postów -->
+  <!-- Lista postów -->
+  <!-- Wyświetla posty od najnowszych -->
     <app-post
         class="post-min"
         class="list-item"
         (delete)="onDelete($event)"
-        *ngFor="let p of posts"
+        *ngFor="let p of posts?.slice().reverse()"
         [data]="p">
     </app-post>
 
