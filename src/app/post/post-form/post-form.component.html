@@ -6,7 +6,7 @@
 <!-- Widok dla Admina -->
 <div *appAllowedUser="'Admin'" class="form-container">
 
-  <h4>Dodaj Nowy Post</h4>
+  <h4 id="title">Dodaj Nowy Post</h4>
 
   <form [formGroup]="postForm" (ngSubmit)="createPost()" >
 

@@ -43,10 +43,17 @@ export class PostFormComponent implements OnInit {
       .then(res => console.log(res))
       .catch(err => console.error(err))
       .finally(() => this.resetForm());
+      // Podmiana tytułu po opubikowaniu posta
+      setTimeout(function() {
+        const title = document.getElementById('title');
+        title.innerHTML='<h4 style="color: rgb(40, 167, 69)">Post został dodany do Twojej listy</h4>'
+      }, 400);
+      // Przejście do strony głównej
+      setTimeout(function() {
+        window.location.href = "http://localhost:4200/posts";
+      }, 2000);
     } else {
       console.warn('Twoj formularz jest niepoprawny!');
     }
-
   }
-
 }

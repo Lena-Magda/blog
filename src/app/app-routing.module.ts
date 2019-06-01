@@ -11,10 +11,7 @@ const routes: Routes = [
   { path: 'create', component: PostFormComponent },
   { path: 'posts', component: PostListComponent },
   { path: 'posts/:id', component: PostDetailsComponent },
-  { path: '**', component: OopsComponent },
-
-  //brak obsługi błędów 404 ze ścieżek 'posts/**'
-
+  { path: '**', component: OopsComponent }
 ];
 
 @NgModule({
