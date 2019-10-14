@@ -22,18 +22,24 @@
       </p>
       <p class="error" *ngIf="showErrors && postForm.get('title').errors?.maxlength">
         *Nazwa może zawierać maksymalnie 100 znaków.
-    </p>
+      </p>
+      <p class="error" *ngIf="showErrors && postForm.get('title').errors?.pattern">
+        *Nazwa nie można zaczynać się od spacji.
+      </p>
   </div>
 
   <div class="text">
       <label>Treść:
-        <textarea class="form-control" rows="10" cols="50" formControlName="text"></textarea>
+        <textarea class="form-control" rows="8" cols="50" formControlName="text"></textarea>
       </label>
       <p class="error" *ngIf="showErrors && postForm.get('text').errors?.required">
         *Treść jest wymagana.
       </p>
       <p class="error" *ngIf="showErrors && postForm.get('text').errors?.minlength">
         *Treść musi zawierać minimum 5 znaków.
+      </p>
+      <p class="error" *ngIf="showErrors && postForm.get('text').errors?.pattern">
+        *Treść nie można zaczynać się od spacji.
       </p>
   </div>
 

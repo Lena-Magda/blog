@@ -21,8 +21,8 @@ export class PostFormComponent implements OnInit {
   //  Tworzy formularz
   public createForm(): FormGroup {
     return this.fb.group({
-      title: ['', [Validators.required, Validators.minLength(2), Validators.maxLength(100)]],
-      text: ['', [Validators.required, Validators.minLength(5)]]
+      title: ['', [Validators.required, Validators.minLength(2), Validators.maxLength(100), Validators.pattern('^\\S+.*')]],
+      text: ['', [Validators.required, Validators.minLength(5), Validators.pattern('^\\S+.*')]]
     });
   }
 
